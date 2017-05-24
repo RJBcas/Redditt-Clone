@@ -49,7 +49,7 @@ class PostsController extends Controller
     public function edit(Post $post){
         if($post->user_id !=\Auth::user()->id){
 
-            return redirect()->route('posts_path')
+            return redirect()->route('posts_path');
         }
 
 
@@ -77,7 +77,7 @@ class PostsController extends Controller
         
         if($post->user_id !=\Auth::user()->id){
 
-            return redirect()->route('posts_path')
+            return redirect()->route('posts_path');
         }
         
         $post->delete();
